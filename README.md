@@ -9,7 +9,7 @@ The main objective of this tool is to provide a way for users to create big imag
 ```
 usage: main.py [-h] [-c COUNT] [-t TILESIZE] [-o OUTPUT]
                [--no-upload]
-               {imgur,s3} image
+               {imgur,s3,cloudinary} image
 
 Split an image, upload it to imgur and automatically write the
 commands in game to create maps
@@ -52,4 +52,15 @@ Afterwards, just run the command with `s3` as a service, for example:
 
 ```
 python main.py s3 my_image.png -c 3
+```
+
+### Cloudinary
+
+For Cloudinary, make sure you have the CLOUDINARY_URL environment variable set, it should look like this: 
+`CLOUDINARY_URL=cloudinary://API-Key:API-Secret@Cloud-name`
+
+Then you can run the command with `cloudinary` as a service, for example:
+
+```
+python main.py cloudinary my_image.png -c 3
 ```
