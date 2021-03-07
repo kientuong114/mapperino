@@ -9,7 +9,7 @@ The main objective of this tool is to provide a way for users to create big imag
 ```
 usage: main.py [-h] [-c COUNT] [-t TILESIZE] [-o OUTPUT]
                [--no-upload]
-               {imgur,s3} image
+               {imgur,s3,cloudinary} image
 
 Split an image, upload it to imgur and automatically write the
 commands in game to create maps
